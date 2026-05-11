@@ -1,0 +1,114 @@
+@import 'tailwindcss';
+
+@theme {
+  --color-daw-darkest: #111111;
+  --color-daw-dark: #1a1a1a;
+  --color-daw-medium: #222222;
+  --color-daw-light: #2a2a2a;
+  --color-daw-border: #333333;
+  --color-daw-border-light: #444444;
+  --color-daw-text: #cccccc;
+  --color-daw-text-dim: #888888;
+  --color-daw-green: #00cc66;
+  --color-daw-green-dim: #009944;
+  --color-daw-orange: #ff6600;
+}
+
+:root {
+  color-scheme: dark;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+
+body {
+  background:
+    radial-gradient(circle at top, rgba(74, 88, 109, 0.2), transparent 32%),
+    linear-gradient(180deg, #16191d, #090a0c 46%, #070708);
+  color: #cccccc;
+  font-family:
+    'Segoe UI',
+    'SF Pro Display',
+    'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.wavesurfer-region {
+  border-inline: 1px solid rgba(0, 204, 102, 0.45);
+  box-shadow:
+    inset 0 0 0 1px rgba(0, 0, 0, 0.22),
+    0 10px 30px rgba(0, 0, 0, 0.18);
+}
+
+.wavesurfer-region-content {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100%;
+  padding-inline: 8px;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: rgba(0, 204, 102, 0.9);
+}
+
+.wavesurfer-wrapper,
+.wavesurfer-scroll {
+  scrollbar-width: thin;
+  scrollbar-color: #4d5561 #0f1114;
+}
+
+.wavesurfer-wrapper::-webkit-scrollbar,
+.wavesurfer-scroll::-webkit-scrollbar {
+  height: 6px;
+}
+
+.wavesurfer-wrapper::-webkit-scrollbar-track,
+.wavesurfer-scroll::-webkit-scrollbar-track {
+  background: #0f1114;
+}
+
+.wavesurfer-wrapper::-webkit-scrollbar-thumb,
+.wavesurfer-scroll::-webkit-scrollbar-thumb {
+  background: #4d5561;
+  border-radius: 3px;
+}
+
+.wavesurfer-wrapper::-webkit-scrollbar-thumb:hover,
+.wavesurfer-scroll::-webkit-scrollbar-thumb:hover {
+  background: #657081;
+}
+
+.wavesurfer-timeline {
+  background: transparent;
+}
+
+.wavesurfer-timeline text {
+  fill: #89909d;
+}
+
+.wavesurfer-cursor::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -3px;
+  width: 8px;
+  height: 8px;
+  border-radius: 999px;
+  background: #ff6600;
+  box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.45);
+}
